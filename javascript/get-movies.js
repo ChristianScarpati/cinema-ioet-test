@@ -4,7 +4,9 @@ export const get_movies = async() => {
   try {
     const response = await fetch(API_URL, OPTIONS);
     const result = await response.text();
-    return JSON.parse(result).results;
+    const parsedResult = JSON.parse(result).results;
+    
+    return parsedResult
   } catch (error) {
     console.error(error);
   }
