@@ -1,5 +1,16 @@
+html,
 body {
     margin: 0;
+    padding: 0;
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 
@@ -130,7 +141,7 @@ div.filter div select {
 
 /* movies */
 h1 {
-    width: 100%;
+    max-width: min-content;
     padding-left: 9%;
     font-size: xx-large;
     color: #808080;
@@ -150,23 +161,33 @@ div.movie-list{
     padding: 0px 10% 30px 10%;
 }
 
-div.movie-list div.poster-container{
+div.movie-list div.poster-container {
     width: 100%;
-    height: auto;
+    height: 43rem;
+    border: 2px solid #203dbd3b;
+    border-radius: 0.7rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-div.movie-list div.poster-container img{
+div.movie-list div.poster-container img {
     width: 100%;
-    height: auto;
+    height: 40rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-div.movie-list div.poster-container button{
+div.movie-list div.poster-container button {
     border-radius: 0;
     width: 100%;
     background-color: darkred;
     border-color: darkred;
+    padding: 0.7rem 1.3rem;
 }
 
+div.movie-list div.poster-container button.schedules {
+    font-size: larger;
+}
 
 /* footer */
 footer {
