@@ -28,7 +28,7 @@ header {
     border-bottom: 1px solid #0000003b;
 }
 
-header > nav {
+header>nav {
     display: grid;
     grid-template-columns: 25% 50% 25%;
     width: 100%;
@@ -38,7 +38,7 @@ header > nav {
 }
 
 nav.options {
-    display: flex; 
+    display: flex;
 }
 
 /* nav bar about us */
@@ -46,12 +46,12 @@ nav.about-us {
     background-color: #ececec;
 }
 
-.social-media > img {
+.social-media>img {
     height: 20px;
     margin: 0px 3px;
 }
 
-nav.options > h4 {
+nav.options>h4 {
     padding: 0px 15px;
     color: black;
     font-size: x-small;
@@ -85,7 +85,7 @@ nav.shop-options {
     height: 18px;
 }
 
-nav.options > h3 {
+nav.options>h3 {
     padding: 0px 10px;
     color: darkred;
     font-size: small;
@@ -98,6 +98,7 @@ nav.options > h3 {
 div.banner {
     display: flex;
     align-items: end;
+    position: relative;
 }
 
 div.banner img {
@@ -110,13 +111,13 @@ div.banner img {
 
 div.banner button {
     background: red;
-    position: absolute; 
+    position: absolute;
     font-size: 16px;
     background-color: #007bff;
-    color: #fff; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 button.more-information {
@@ -135,7 +136,7 @@ div.filter {
     padding: 10px 0px;
 }
 
-div.filter > div {
+div.filter>div {
     display: flex;
 }
 
@@ -161,8 +162,6 @@ div.filter div select {
 }
 
 
-
-
 /* movies */
 h1 {
     max-width: min-content;
@@ -174,13 +173,11 @@ h1 {
 }
 
 /*movie-list */
-div.movie-list{
+div.movie-list {
     display: grid;
-    grid-template-columns: 
-        repeat(
-            auto-fit,
-            minmax(230px, 1fr)
-        );
+    grid-template-columns:
+        repeat(auto-fit,
+            minmax(230px, 1fr));
     gap: 25px;
     padding: 0px 10% 30px 10%;
 }
@@ -213,6 +210,47 @@ div.movie-list div.poster-container button.schedules {
     font-size: larger;
 }
 
+/*movie-details */
+div.single-movie-poster-container {
+    display: flex;
+    padding: 7% 9%;
+    box-shadow: inset rgb(123 123 123) 0px -12px 117px 16px;
+}
+
+div.left-container {
+    padding-right: 5%;
+}
+
+div.right-container {
+    flex: 1
+}
+
+div.right-container img,
+.right-container p {
+    margin-left: 20px;
+
+}
+
+div.movie-details img {
+    object-fit: fill;
+    width: 40rem;
+    height: 50rem;
+    border: 2px solid #203dbd3b;
+    border-radius: 0.7rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+div.movie-details>div.single-movie-poster-container>div.right-container>div.description-container>p {
+    font-size: 2em;
+}
+
+div.movie-details>div.single-movie-poster-container>div.right-container>div.description-container hr.dashed-line {
+    border-style: dashed;
+}
+
+/* -------------------- */
+
+
 /* footer */
 footer {
     display: grid;
@@ -232,8 +270,7 @@ footer div h3 {
     font-size: smaller;
 }
 
-footer div.apps > img {
+footer div.apps>img {
     height: 17px;
     margin: 3% 10px
-    
 }

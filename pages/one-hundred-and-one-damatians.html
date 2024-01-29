@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/global.css"/>
-    <title>Welcome to Cinemar - Main Page</title>
-    <script src="../javascript/get-movies.js" type="module"></script>
+    <link rel="stylesheet" href="../css/global.css" />
+    <title>One hundred and one damatians</title>
+    <script src="../javascript/get-movie.js" type="module"></script>
     <script src="../javascript/constants.js" type="module"></script>
-    <script src="../javascript/galleryMovies.js" type="module"></script>
+    <script src="../javascript/PosterMovie.js" type="module"></script>
 </head>
+
 <body>
     <header>
         <nav class="about-us">
@@ -34,34 +36,30 @@
             </nav>
         </nav>
     </header>
-    
-    <div class="banner">
-        <img src="../resources/images/banner.jpg" alt="banner main page">
-        <button class="more-information">More Information</button>
-    </div>
+
+
 
     <div class="filter">
         <div class="city-filter">
             <h3>You are in:</h2>
-            <select required aria-placeholder="Value2">
-                <option value="None" hidden>None</option>
-                <option value="value2">Value 2</option>
-                <option value="value3">Value 3</option>
-            </select>
+                <select required aria-placeholder="Value2">
+                    <option value="None" hidden>None</option>
+                    <option value="value2">Value 2</option>
+                    <option value="value3">Value 3</option>
+                </select>
         </div>
         <div class="local-filter">
             <h3>Theaters:</h2>
-            <select required aria-placeholder="Value2">
-                <option value="None" hidden>None</option>
-                <option value="value2">Value 2</option>
-                <option value="value3">Value 3</option>
-            </select>
+                <select required aria-placeholder="Value2">
+                    <option value="None" hidden>None</option>
+                    <option value="value2">Value 2</option>
+                    <option value="value3">Value 3</option>
+                </select>
         </div>
     </div>
 
-    <h1>Billboard</h1>
-    <div class="movie-list" id="movie-list">
-    </div>
+    <div class="movie-details" id="movie-details"></div>
+
 </body>
 
 <footer>
@@ -87,4 +85,5 @@
         <img src="../resources/icons/instagram-red.png" alt="">
     </div>
 </footer>
+
 </html>

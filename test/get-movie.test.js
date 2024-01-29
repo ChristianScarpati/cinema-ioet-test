@@ -4,16 +4,17 @@ import "jest"
 
 
 describe("get_movie", () => {
+    
     it("should fetch movie data successfully", async () => {
         global.fetch = jest.fn().mockResolvedValue({
-            text: () => Promise.resolve('{"title":"The Matrix"}'),
+            text: () => Promise.resolve('{"results": {"title": "The Matrix"}}'),
         });
 
         const movieId = 346345;
         const movieData = await get_movie(movieId);
 
         expect(global.fetch).toHaveBeenCalledWith(
-            `${API_MOVIE_ID_URL}/${movieId}`,
+            `${API_MOVIE_ID_URL}${movieId}?info=base_info`,
             OPTIONS
         );
 
