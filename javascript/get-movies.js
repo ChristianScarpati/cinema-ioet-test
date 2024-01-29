@@ -8,6 +8,6 @@ export const get_movies = async() => {
     
     return parsedResult
   } catch (error) {
-    console.error(error);
+    throw new Error("API is down");
   }
 }
